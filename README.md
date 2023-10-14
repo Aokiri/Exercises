@@ -4,7 +4,7 @@ A programming exercise repository where I will be adding each solution to exerci
 
 ## Table of Contents
 
-- [C#](https://github.com/Aokiri/Exercises/tree/main/C%23)
+- [C#](#C#)
 - [Python](#Python)
 - [JavaScript](#JavaScript)
 - [TypeScript](#TypeScript)
