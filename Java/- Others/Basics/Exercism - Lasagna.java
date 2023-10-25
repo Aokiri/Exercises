@@ -1,3 +1,5 @@
+// Link to the exercise: https://exercism.org/tracks/java/exercises/lasagna
+
 public class Lasagna 
 {
     // The time is displayed in minutes.

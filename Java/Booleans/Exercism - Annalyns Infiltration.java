@@ -1,3 +1,5 @@
+// Link to the exercise: https://exercism.org/tracks/java/exercises/annalyns-infiltration
+
 public class AnnalynsInfiltration 
 {
     // Takes a boolean value that indicates if the knight is awake

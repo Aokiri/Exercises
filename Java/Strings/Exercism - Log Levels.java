@@ -1,3 +1,5 @@
+// Link to the exercise: https://exercism.org/tracks/java/exercises/log-levels
+
 public class LogLevels {
     
     // Take the index of the colon in the string to return the message.
