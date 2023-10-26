@@ -1,3 +1,5 @@
+// Link to the exercise: https://exercism.org/tracks/java/exercises/squeaky-clean
+
 class SqueakyClean 
 {
     static String clean(String identifier)
