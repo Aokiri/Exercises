@@ -6,7 +6,7 @@ A programming exercise repository where I will be adding each solution to exerci
 
 - [C#](https://github.com/Aokiri/Exercises/tree/main/C%23)
 - [Java](https://github.com/Aokiri/Exercises/tree/main/Java)
-- [Python](#Python)
+- [Python](https://github.com/Aokiri/Exercises/tree/main/Python)
 - [JavaScript](#JavaScript)
 - [TypeScript](#TypeScript)
 - [PowerShell](#PowerShell)
