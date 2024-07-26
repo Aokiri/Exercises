@@ -4,7 +4,6 @@ How to play blackjack:    https://bicyclecards.com/how-to-play/blackjack/
 "Standard" playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 """
 
-
 def value_of_card(card):
     """Determine the scoring value of a card.
 
@@ -16,7 +15,11 @@ def value_of_card(card):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    if card in 'JQK':
+        return 10
+    elif card == 'A':
+        return 1
+    return int(card)
 
 
 def higher_card(card_one, card_two):
@@ -30,7 +33,11 @@ def higher_card(card_one, card_two):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    if value_of_card(card_one) > value_of_card(card_two):
+        return card_one
+    elif value_of_card(card_one) < value_of_card(card_two):
+        return card_two
+    return card_one, card_two
 
 
 def value_of_ace(card_one, card_two):
@@ -44,7 +51,11 @@ def value_of_ace(card_one, card_two):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    if card_one == 'A' or card_two == 'A':
+        return 1
+    elif value_of_card(card_one) + value_of_card(card_two) <= 10:
+        return 11
+    return 1
 
 
 def is_blackjack(card_one, card_two):
@@ -58,7 +69,7 @@ def is_blackjack(card_one, card_two):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    return (card_one == 'A' and value_of_card(card_two) == 10) or (card_two == 'A' and value_of_card(card_one) == 10)
 
 
 def can_split_pairs(card_one, card_two):
@@ -68,7 +79,7 @@ def can_split_pairs(card_one, card_two):
     :return: bool - can the hand be split into two pairs? (i.e. cards are of the same value).
     """
 
-    pass
+    return (value_of_card(card_one) == value_of_card(card_two))
 
 
 def can_double_down(card_one, card_two):
@@ -78,4 +89,4 @@ def can_double_down(card_one, card_two):
     :return: bool - can the hand can be doubled down? (i.e. totals 9, 10 or 11 points).
     """
 
-    pass
+    return 9 <= (value_of_card(card_one) + value_of_card(card_two)) <= 11
