@@ -1,7 +1,7 @@
 # Link to the exercise: https://exercism.org/tracks/python/exercises/guidos-gorgeous-lasagna
 
 # Returns how many minutes the lasagna should bake in the oven.
-EXPECTED_BAKE_TIME = 40
+EXPECTED_BAKE_TIME: int = 40
 
 
 def bake_time_remaining(elapsed_bake_time: int) -> int:
