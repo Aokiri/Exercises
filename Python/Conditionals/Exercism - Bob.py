@@ -2,13 +2,13 @@ def response(hey_bob):
     sentence = hey_bob.strip()
     isyelling = hey_bob.isupper()
 
-    if isyelling and sentence[-1] is "?":
+    if isyelling and sentence.endswith('?'):
         return "Calm down, I know what I'm doing!"
     
     elif sentence is "":
         return "Fine. Be that way!"
     
-    elif sentence[-1] is "?":
+    elif sentence.endswith('?'):
         return "Sure."
     
     elif isyelling:
