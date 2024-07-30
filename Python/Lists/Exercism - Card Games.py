@@ -22,10 +22,10 @@ def concatenate_rounds(rounds_1: list, rounds_2: list) -> list:
     :return: list - all rounds played.
     """
 
-    return rounds_1.append(rounds_2)
+    return rounds_1 + rounds_2
 
 
-def list_contains_round(rounds, number):
+def list_contains_round(rounds: list, number: int) -> bool:
     """Check if the list of rounds contains the specified number.
 
     :param rounds: list - rounds played.
@@ -33,17 +33,18 @@ def list_contains_round(rounds, number):
     :return: bool - was the round played?
     """
 
-    pass
+    return number in rounds
 
 
-def card_average(hand):
+def card_average(hand: list) -> float:
     """Calculate and returns the average card value from the list.
 
     :param hand: list - cards in hand.
     :return: float - average value of the cards in the hand.
     """
-
-    pass
+    # This can be done with the function mean() from statistic module
+    # But I would rather do it this way
+    return sum(hand) / len(hand) 
 
 
 def approx_average_is_average(hand):
@@ -52,8 +53,11 @@ def approx_average_is_average(hand):
     :param hand: list - cards in hand.
     :return: bool - does one of the approximate averages equal the `true average`?
     """
+    first_last_average = (hand[0] + hand[-1]) / 2
+    middle_index = int((len(hand) - 1) / 2)
+    real_average = card_average(hand)
 
-    pass
+    return real_average in (first_last_average, hand[middle_index])
 
 
 def average_even_is_average_odd(hand):
@@ -63,14 +67,21 @@ def average_even_is_average_odd(hand):
     :return: bool - are even and odd averages equal?
     """
 
-    pass
+    average_even = card_average(hand[::2])
+    average_odd = card_average(hand[1::2])
+
+    return average_even == average_odd
 
 
-def maybe_double_last(hand):
+def maybe_double_last(hand: list) -> list:
     """Multiply a Jack card value in the last index position by 2.
 
     :param hand: list - cards in hand.
     :return: list - hand with Jacks (if present) value doubled.
     """
+    is_jack = hand[-1] == 11
 
-    pass
+    if is_jack:
+        hand[-1] *= 2
+
+    return hand
