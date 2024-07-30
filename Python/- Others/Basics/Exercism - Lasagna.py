@@ -3,6 +3,7 @@
 # Returns how many minutes the lasagna should bake in the oven.
 EXPECTED_BAKE_TIME: int = 40
 
+# Acabo de agregar un comentario al código. 
 
 def bake_time_remaining(elapsed_bake_time: int) -> int:
     """Calculate the bake time remaining.
