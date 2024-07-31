@@ -22,4 +22,3 @@ class Lasagna
     {
         return PreparationTimeInMinutes(layersAdd) + minsInOven;
     }
-}
