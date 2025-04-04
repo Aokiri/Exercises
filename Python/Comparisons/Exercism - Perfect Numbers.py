@@ -18,4 +18,4 @@ def classify(number: int) -> str:
         return "abundant"
     elif number == aliquot_sum:
         return "perfect"
-    return "deficient"
+    return 'deficient'
